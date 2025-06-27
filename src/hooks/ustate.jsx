@@ -14,17 +14,23 @@ let[usState,setUsstate]=useState("crt");
 let [set,setSet] = useState("react");
 
 function changetext(){
-
 setinfo("following")
+}
 
+function change (){
 setVal("hahaha")
+}
 
+function change1 (){
 setCount("counting start")
+}
 
-setUsstate("Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic magni recusandae est, consequuntur quas voluptate placeat. Ex vero magnam maxime, at magni corporis error, quod inventore placeat reiciendis, debitis delectus.")
-
+function change2 (){
 setSet("react js")
+}
 
+function change3(){
+setUsstate("Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic magni recusandae est, consequuntur quas voluptate placeat. Ex vero magnam maxime, at magni corporis error, quod inventore placeat reiciendis, debitis delectus.")
 }
 
   return (
@@ -32,20 +38,13 @@ setSet("react js")
      
 <button onClick={changetext} id='A'>{info}</button>
 
-<br /><br /><br />
+<button onClick={change}>{val}</button>
 
-<button onClick={changetext}>{val}</button>
-<br /><br /><br />
+<button onClick={change1}>{count}</button>
 
-<button onClick={changetext}>{count}</button>
-<br /><br />
+<h1 onClick={change2}>{set}</h1>
 
-<p onClick={changetext} style={{color:"red"}}>{usState}</p>
-
-<br /><br /><br />
-
-<h1 onClick={changetext}>{set}</h1>
-
+<p onClick={change3} style={{color:"red"}}>{usState}</p>
 
 
 

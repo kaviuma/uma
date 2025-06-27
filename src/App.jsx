@@ -1,6 +1,6 @@
 // import React from 'react'
 // import useRef from './hooks/useRef'
-// import Ustate from './hooks/ustate'
+import Ustate from './hooks/ustate'
 // import CR from './CR'
 // import { Grid } from './Pages/Grid'
 // import G2 from './Pages/G2'
@@ -11,7 +11,11 @@
 // import UseContext from './hooks/UseContext'
 // import UE from "./hooks/UE"
 
-import { useEffect, useState } from "react"
+// import { useEffect, useState } from "react"
+// import UseReducer from "./hooks/UseReducer"
+
+
+
 
 
 
@@ -42,20 +46,26 @@ function App() {
 
 
 // fakestore 
-let[data,setData] = useState([]);
+// let[data,setData] = useState([]);
 
-useEffect(()=>{
- fetch('https://fakestoreapi.com/products')
-   .then(response => response.json())
-  .then(data => setData(data));
+// useEffect(()=>{
+//  fetch('https://fakestoreapi.com/products')
+//    .then(response => response.json())
+//   .then(data => setData(data));
 
   
-},[])
-console.log(data);
+// },[])
+// console.log(data);
   
 return (
+
+
+
+ 
    <div>
-{data.map((d)=>{
+
+    {/* fakestore api */}
+ {/* {data.map((d)=>{
   return(
     <>
     <h2>{d.title}</h2>
@@ -63,12 +73,15 @@ return (
     
     </>
   )
-})}
+})} */}
+ 
+
+
+ {/* <UseReducer/> */}
 
 
 
-
-
+ <Ustate /> 
        </div>
       
     
@@ -82,14 +95,8 @@ return (
 
 
 
-{/* <Ustate /> */}
- {/* <useRef/> */}
- {/* <CR/> */}
- {/* <Conren/> */}
-{/* <Grid/>  */}
- {/* <G2 /> */}
-{/* <Ustate1/> */}
-{/* <UseContext/> */}
+
+
 
 
 
@@ -111,5 +118,4 @@ return (
 
 </div>
 */}
-
 export default App
