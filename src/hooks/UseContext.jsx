@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 
+
+
 const UseContext = () => {
 
 let [num,setNum] = useState(100);
 
 let[num1,setNum1] = useState(2000);
-
+ 
 useEffect(()=>{
     
 setNum(101);

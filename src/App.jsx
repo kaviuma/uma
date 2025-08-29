@@ -13,7 +13,10 @@ import Ustate from './hooks/ustate'
 
 // import { useEffect, useState } from "react"
 // import UseReducer from "./hooks/UseReducer"
-
+import {BrowserRouter,Route, Routes} from "react-router-dom"
+import A from './Pages/A'
+import H from './Pages/H'
+import Navbar from './Pages/Navbar'
 
 
 
@@ -33,7 +36,7 @@ function App() {
 
 //    function Hide(){
 
-//  if(btn.current.innerText == "Close"){
+ //  if(btn.current.innerText == "Close"){
 //   P.current.style.display = "none";
 //   btn.current.innerText = "Open"
 //  }
@@ -78,10 +81,21 @@ return (
 
 
  {/* <UseReducer/> */}
-
-
-
  <Ustate /> 
+
+<BrowserRouter>
+<Navbar/>
+<Routes>
+  <Route path='/' element={<H/>}></Route>
+  <Route path='/a' element={<A/>}></Route>
+</Routes>
+
+</BrowserRouter>
+
+
+
+
+
        </div>
       
     
